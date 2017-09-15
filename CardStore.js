@@ -38,16 +38,6 @@ var CardStore = function(fileName, path, data) {
                                 reject(err);
                             }
                             else {
-                                try {
-                                    // parse json data from string
-                                    data = JSON.parse(data);
-                                }
-                                catch (e) {
-                                    // an error occured trying to parse json
-                                    // pass the error to the promise
-                                    reject(e);
-                                }
-                                // pass data to callback
                                 resolve(data);
                             }
                         }
@@ -62,7 +52,7 @@ var CardStore = function(fileName, path, data) {
                     // write data to file storing data as a json string
                     fs.writeFile(
                         filePath, 
-                        JSON.stringify(data), 
+                        data, 
                         { encoding: encoding }, 
                         function(err) {
                             // pass error writing file to promise
