@@ -24,7 +24,7 @@ var CardStore = function(fileName, path, data) {
 
     // return CardStore object
     return {
-        filePath: filePath,
+        filePath: function() { return filePath },
         // returns promise passing data read from file
         getData: function() {
             return new Promise( 
