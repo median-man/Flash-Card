@@ -1,0 +1,19 @@
+{
+  "name": "flash-card-api",
+  "version": "1.0.0",
+  "description": "\"Simple flash card app back end.\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/median-man/Flash-Card-API.git"
+  },
+  "author": "John Desrosiers",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/median-man/Flash-Card-API/issues"
+  },
+  "homepage": "https://github.com/median-man/Flash-Card-API#readme"
+}
