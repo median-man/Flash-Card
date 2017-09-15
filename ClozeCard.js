@@ -1,6 +1,7 @@
 // Constructor for ClozeCard class
 var ClozeCard = function(text, cloze) {
     if ( this instanceof ClozeCard ) {
+        // TODO: validate text and cloze
         this.cloze = cloze;
         this.fullText = text;
 
