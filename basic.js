@@ -1,5 +1,6 @@
 /* 
-*   CLI for reviewing basic flash cards
+*   This module implements a command line interface for
+*   reviewing basic cards.
  */
 
  /* 
@@ -72,6 +73,7 @@ fs.readFile("title.txt", "utf8",
     function(err, data) {
         // display title string
         console.log(data);
+
         // start the app
         run();
     }
