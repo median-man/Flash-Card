@@ -1,6 +1,11 @@
 # backup data
 _*
 
+# version 0 files
+main.js
+Storage.js
+CardStore.js
+
 # Temp files
 test.json
 
