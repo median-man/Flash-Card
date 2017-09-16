@@ -5,6 +5,7 @@ _*
 main.js
 Storage.js
 CardStore.js
+cards.json
 
 # Temp files
 test.json
