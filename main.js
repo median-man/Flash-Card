@@ -3,6 +3,7 @@
  */
 const BasicCard = require("./BasicCard");
 const ClozeCard = require("./ClozeCard");
+const CardStore = require("./CardStore.js")
 
 /* 
 *   Globals
@@ -15,6 +16,8 @@ const opReview = "review";
 const typeCloze = "cloze";
 const typeBasic = "basic";
 
+// storage for cards
+const myStore = new CardStore("cards.json");
 
 /* 
 *   Evaluate parameters
@@ -42,20 +45,7 @@ if ( operation === opAdd ) {
         throw new InvalidArgumentException(type + " is not a valid card type.");
     }
     // add card to storage
-    addCard(JSON.stringify(newCard))
-        .then(
-            function(cardData) {
-                // log result
-                console.log("Added card:\n", cardData);
-            }
-        )
-        .catch(
-            function(reason) {
-                // log reason for failure
-                console.log("Failed to add card:\n", reason);
-            }
-        );
-
+    addCard(JSON.stringify(newCard));
 }
 // return array of cards from storage
 else if ( operation === opReview ) {
@@ -85,8 +75,22 @@ else {
 function addCard(cardData) {
     return new Promise(
         function(resolve, reject) {
+            var cardsArray;
             try {
                 // TODO: add the card data to storage
+                // get cards from storage
+                getCards()
+                    .then(
+                        function(data) {
+                            cardsArray = JSON.parse(data);
+                            cardsArray.push(cardData);                            
+                        }
+                    )
+                    .catch(
+                        function(reason) {
+                            reject(reason);
+                        }
+                    )
                 // pass card to the callback
                 resolve(cardData);
             }
