@@ -1,10 +1,12 @@
 # Quote Cards
-Command Line Quiz game
+Command Line Quiz game for NodeJS.
 
 ## Getting Started
 Clone or fork the repository.
 
 Run "npm install".
+
+Run "node index.js".
 
 Choose the "Basic" or "Cloze" mode to run the application.
 
