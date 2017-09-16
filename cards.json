@@ -1,1 +1,26 @@
-this is just some bs test stuff
+[
+    {
+        "front": "What is the air-speed velocity of an unladen swallow?",
+        "back": "An African or European swallow?"
+    },
+    {
+        "front": "What is the first step in using a 'Holy Hand Grenade of Antioch'?",
+        "back": "take out the Holy Pin"
+    },
+    {
+        "font": "What are witches made of?",
+        "back": "wood"
+    },
+    {
+        "fullText": "He who is valiant and pure of spirit may find the holy grail in the Castle of Aaauuuggghhh... ",
+        "cloze": "holy grail"
+    },
+    {
+        "fullText": "She's beautiful, she's rich, she's got huge... tracts of land.",
+        "cloze": "tracts of land"
+    },
+    {
+        "fullText": " Oh, what sad times are these when passing ruffians can say Ni at will to old ladies.",
+        "cloze": "Ni"
+    }
+]
