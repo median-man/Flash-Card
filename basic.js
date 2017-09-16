@@ -68,13 +68,5 @@ function run() {
     );
 }
 
-// get title string from file
-fs.readFile("title.txt", "utf8", 
-    function(err, data) {
-        // display title string
-        console.log(data);
-
-        // start the app
-        run();
-    }
-);
+// start the app
+run();

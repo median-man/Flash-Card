@@ -1,5 +1,5 @@
 /* 
-*   This module implements a command line interface for
+*   This module runs a command line interface for
 *   reviewing cloze cards.
  */
 
@@ -92,14 +92,5 @@ for ( var i = 0; i < cardData.length; i++ ) {
     // to prevent 'no callback error' from being thrown by fs module
     fs.appendFile("errors.log", errorMessages ,function(err) {});
 }
-
-// get title string from file
-fs.readFile("title.txt", "utf8", 
-    function(err, data) {
-        // display title string
-        console.log(data);
-
-        // start the app
-        run();
-    }
-);
+// run the app
+run();
