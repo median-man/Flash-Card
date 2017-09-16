@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/median-man/Flash-Card-API/issues"
   },
-  "homepage": "https://github.com/median-man/Flash-Card-API#readme"
+  "homepage": "https://github.com/median-man/Flash-Card-API#readme",
+  "dependencies": {
+    "inquirer": "^3.2.3"
+  }
 }
