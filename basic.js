@@ -14,6 +14,7 @@ const cards = require("./basic.json"); // array of flash card objects
 * Globals
  */
 var cardIndex = 0;
+var score = 0; // counts correctly answered cards
 
 // Runs the app until all cards have been reviewed by the user.
 function run() {
@@ -35,7 +36,8 @@ function run() {
             var resultMsg;
             // compare input to answer after user enters input
             if ( answers.userAnswer === basicCard.back ) {
-                resultMsg = "You answered correctly!";
+                resultMsg = "You answered correctly!";                
+                score++; // increment score
             } else {
                 resultMsg = "Incorrect answer. The correct answer is \"" + 
                     basicCard.back + "\".";
@@ -44,11 +46,18 @@ function run() {
             // display result string
             console.log(resultMsg);
             
-            // increment cardIndex
+            // continue to next card if there are more cards
             cardIndex++;
-            // run the next card if there are more cards
             if ( cardIndex < cards.length ) {
                 run();
+            }
+
+            // display end of game message
+            else {
+                console.log(
+                    "Game Over!\nYou correctly answered " + score + 
+                    " of " + cardIndex + " questions."
+                );
             }
         }
     ).catch(
