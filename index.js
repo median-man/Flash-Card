@@ -31,10 +31,10 @@ fs.readFile("title.txt", "utf8",
             function(answers) {
                 // run the app chosen by the user
                 if ( answers.userChoice === basic ) {
-                    require("./basic.js");
+                    require("./basic/basic.js");
                 }
                 else if ( answers.userChoice === cloze ) {
-                    require("./cloze.js");
+                    require("./cloze/cloze.js");
                 }
             }
         ).catch(
