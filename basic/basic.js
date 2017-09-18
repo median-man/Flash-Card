@@ -68,5 +68,5 @@ function run() {
     );
 }
 
-// start the app
-run();
+// export run method
+module.exports.run = run;

@@ -92,5 +92,5 @@ for ( var i = 0; i < cardData.length; i++ ) {
     // to prevent 'no callback error' from being thrown by fs module
     fs.appendFile("errors.log", errorMessages ,function(err) {});
 }
-// run the app
-run();
+
+module.exports.run = run;

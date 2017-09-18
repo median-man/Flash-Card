@@ -8,10 +8,12 @@
   */
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Basic = require("./basic/basic.js");
+const Cloze = require("./cloze/cloze.js");
 
 // choices
-const basic = "Basic";
-const cloze = "Cloze";
+const chBasic = "Basic";
+const chCloze = "Cloze";
 
 // get title string from file
 fs.readFile("title.txt", "utf8", 
@@ -25,16 +27,16 @@ fs.readFile("title.txt", "utf8",
                 name:"userChoice",
                 message:"What would you like to run?",
                 type:"list",
-                choices: [basic, cloze]
+                choices: [chBasic, chCloze]
             }
         ).then(
             function(answers) {
                 // run the app chosen by the user
-                if ( answers.userChoice === basic ) {
-                    require("./basic/basic.js");
+                if ( answers.userChoice === chBasic ) {
+                    Basic.run();
                 }
-                else if ( answers.userChoice === cloze ) {
-                    require("./cloze/cloze.js");
+                else if ( answers.userChoice === chCloze ) {
+                    Cloze.run();
                 }
             }
         ).catch(
