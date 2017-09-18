@@ -61,7 +61,7 @@ function run() {
         }
     ).catch(
         function(reason) {
-            console.log(reason);
+            console.log("An unexpected error has occured. Please restart the application.");
         }
     );
 }
