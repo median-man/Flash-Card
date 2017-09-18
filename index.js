@@ -6,12 +6,31 @@
  /* 
  *  Import modules
   */
-const inquirer = require("inquirer");
-const fs = require("fs");
-const Basic = require("./basic/basic.js");
-const Cloze = require("./cloze/cloze.js");
+try {
+    var inquirer = require("inquirer");
+    var fs = require("fs");
+    var Basic = require("./basic/basic.js");
+    var Cloze = require("./cloze/cloze.js");
 
-// choices
+// error occured loading modules
+} catch (err) {
+    if ( err.code === "MODULE_NOT_FOUND" ) {
+        // not all modules have been installed correctly
+        return console.log(
+            "The application was installed incorrectly. Please remove all " + 
+            "application files and try installing again. Refer to the " +
+            "README. (https://github.com/median-man/Quote-Cards)"
+        );
+    } else {
+        // there was an unexpected error loading the modules
+        console.log(
+            "An unexpected error occured. One or more files may " +
+            "be missing. Please try installing the application again."
+        );
+    }
+}
+
+// choices for flash card mode
 const chBasic = "Basic";
 const chCloze = "Cloze";
 
