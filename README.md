@@ -2,7 +2,7 @@
 Command Line Quiz game for NodeJS.
 
 ## Getting Started
-Clone or fork the repository.
+Clone or fork the [repository](https://github.com/median-man/Quote-Cards).
 
 Run "npm install".
 
